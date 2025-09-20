@@ -1,0 +1,132 @@
+body,
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 80px;
+  min-height: 80px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 80px;
+  min-height: calc(100vh - 160px);
+}
+
+.row {
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  overflow-x: auto;
+  margin-top: 40px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.row__item {
+  -ms-flex-preferred-size: calc(100% / 3);
+  flex-basis: calc(100% / 3);
+  margin: 20px 10px;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Cambia el color de fondo de la primera, tercera y quinta tarjeta */
+.row__item:nth-of-type(odd) {
+  background-color: #f0f8ff;
+  /* Azul claro */
+}
+
+/* Cambia el color de fondo de la segunda, cuarta y sexta tarjeta */
+.row__item:nth-of-type(even) {
+  background-color: #ffe4e1;
+  /* Rosa claro */
+}
+
+/* Aplica estilo a la primera letra del primer encabezado h2 */
+.row__item:first-of-type h2 {
+  font-size: 2em;
+  /* Aumenta el tamaño */
+  color: red;
+  /* Cambia el color a rojo */
+  font-weight: bold;
+  /* Pone el texto en negrita */
+}
+
+.card {
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  min-width: 270px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.1),
+    6px 6px 10px rgba(0, 0, 0, 0.08), 2px 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.1), 6px 6px 10px rgba(0, 0, 0, 0.08),
+    2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card__link {
+  background-color: rgba(0, 0, 100, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.card__link:hover {
+  opacity: 1;
+}
+
+.content__title::after {
+  content: "!";
+}
+
+.content__title::before {
+  content: "🎯";
+}
+
+.content__paragraph::first-letter{
+  font-size:2em;
+  font-weight: bold;
+}
+
+.content__paragraph {
+  height: 144px;
+  overflow: auto;
+}
+
+.footer {
+  min-height: 80px;
+  padding: 0 80px;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
